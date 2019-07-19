@@ -1,0 +1,73 @@
+.toTop{
+	display: block;
+	position: fixed;
+	text-align: center;
+	background-color: grey;
+	right: 10px;
+	bottom: 10%;
+	border: 2px solid black;
+	border-radius: 5px;
+	width: 40px;
+	z-index: 1000;
+}
+
+.toTop>a{
+	color: white;
+}
+
+.title{
+	font-size: 2em;
+	font-weight: bold;
+}
+
+.head{
+	display: block;
+	border-bottom: 1px solid #c7c7c8;
+	border-top: 5px solid #019443;
+	margin-bottom: 0;
+	margin-left: 15%;
+	margin-right: 15%;
+	padding: 2em;
+	overflow: auto;
+}
+
+.directory{
+	display: block;
+	line-height: 1.5em;
+	width: 180px;
+	min-height: 200px;
+	margin-left: 10%;
+	border:1px solid grey;
+	float: left;
+}	
+
+.directory>p{
+	text-align: center;
+}
+
+.pic{
+	float: right;
+	max-height: 30%;
+	max-width: 30%;
+	margin-right: 10%; 
+}
+
+article>section{
+	display: block;
+	border-bottom: 1px solid #c7c7c8;
+	margin-left: 15%;
+	padding-left: 2em;
+	line-height: 1.5em;
+	width: 70%;
+	overflow: auto;
+	clear:both;
+}
+
+article>section:first-child{
+	border-bottom-width: 0;
+	margin-bottom: 10px; 
+}
+
+footer{
+	clear: both;
+}
