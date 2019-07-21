@@ -5,22 +5,16 @@
 	<link rel="stylesheet" type="text/css" href="../css/style.css">
 	<meta charset="utf-8">
 
-		<script type="text/javascript">
-			function loadXMLDoc(){
-				  var xmlhttp=new XMLHttpRequest();
-				  console.log("send");
-				  xmlhttp.onreadystatechange=function()
-				  {
-				    if (xmlhttp.readyState==4 && xmlhttp.status==200)
-				    {
-				    	document.getElementById("test").innerHTML= xmlhttp.responseText;
-				    }
-				  }
-				  xmlhttp.open("GET","ajaxTry.txt",true);
-				  xmlhttp.send();
-			}
-		</script>
+	<script type="text/javascript" src="../script/DOM.js"></script>
 </head>
+<script type="text/javascript">
+	function func(){
+		alert("page loaded.");
+	}
+	function func2(){
+		alert("ppp");
+	}
+</script>
 
 <body id="top">
 	<div class="toTop">
@@ -29,8 +23,8 @@
 
 	<header class="head">
 					<nav>
-				<ul>
-					<li>
+				<ul id="UL">
+					<li id="domTest">
 						<a href="mio.html">MIO</a>
 					</li>
 					<li>
@@ -60,7 +54,7 @@
 			</fieldset>
 		</form>
 
-		<button type="button" onclick="loadXMLDoc()"> click</button>
+		<button type="button" onclick="dom()"> click</button>
 		<div id="test"><p>www</p></div>
 	</header>
 
