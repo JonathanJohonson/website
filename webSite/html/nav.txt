@@ -1,0 +1,36 @@
+<p id="top"></p>
+<!-- fixed buttom to top-->
+<a class="toTop" href="#top">TOP</a>
+<header class="head">
+				<nav>
+			<ul id="UL">
+				<li id="domTest">
+					<a href="mio.html">MIO</a>
+				</li>
+				<li>
+					<a href="irina.html">Irina</a>
+				</li>
+				<li>
+					<a href="winter.html">Winter</a>
+				</li>
+				<li>
+					<a href="main.html">Back</a>
+				</li>
+			</ul>
+		</nav>
+	<form method="get" accept="">
+		<fieldset>
+			<legend style="font-size:1.5em; font-weight='bold'">Account</legend>
+			<label for="ID">ID:	</label>
+			<input type="text" name="acc" id="ID" required="required" placeholder="user name" accesskey="s"><br>
+			<input type="radio" name="gender" value="male">
+			<label>male</label><br>
+			<input type="radio" name="gender" id="gender" value="female">
+			<label for="gender">female</label><br>
+			<label for="email">email:</label>
+			<input type="Email" name="youxiang" placeholder ="abc@efg.com">
+			<input type="hidden" name="hide" value="www">
+			<br/><input type="submit" value="create">
+		</fieldset>
+	</form>
+</header>

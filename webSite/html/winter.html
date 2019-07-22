@@ -2,36 +2,29 @@
 <html>
 <head>
 	<title>winter-JJpedia</title>
+	<meta charset="utf-8">
+	<script type="text/javascript" src="../lib/jquery-3.4.1.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="../css/style.css?v1.0">
 </head>
 <body>
-	<header><big><strong>My pictures collection</strong></big>
-			<nav>
-				<ul>
-					<li>
-						<a href="mio.html">MIO</a>
-					</li>
-					<li>
-						<a href="irina.html">Irina</a>
-					</li>
-					<li>
-						<a href="winter.html">Winter</a>
-					</li>
-					<li>
-						<a href="main.html">Back</a>
-					</li>
-				</ul>
-			</nav>
-		</header>
+	<nav id="nav"></nav>
+	<!-- load the nav -->
+	<script type="text/javascript">
+		$("#nav").load("nav.txt");
+	</script>
 
-		<article>
+	<article>
+		<section id="base">
 			<h1>Winter</h1>
 			<a href="../pictures/winter.jpg" target="_blank"><img src="../pictures/winter.jpg" height="400" alt="winter"></a>
-			<section>
-				<p>Pixiv画师PFFK的作品。</p>
-			</section>
-		</article>
-		<footer>
-			<p align="right"><small>&copy 2019 By Johnson</small></p>
-		</footer>		
+		</section>
+
+		<section id="intro">
+			<p>Pixiv画师PFFK的作品。</p>
+		</section>
+	</article>
+	<footer>
+		<p align="right"><small>&copy 2019 By Johnson</small></p>
+	</footer>		
 </body>
 </html>

@@ -3,31 +3,24 @@
 <head>
 	<meta type="text/html" charset="utf-8">
 	<title>Irina-JJpedia</title>
-
+	<script type="text/javascript" src="../lib/jquery-3.4.1.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="../css/style.css?v1.0">
 </head>
 <body>
-	<header><big><strong>My pictures collection</strong></big>
-			<nav>
-				<ul>
-					<li>
-						<a href="mio.html">MIO</a>
-					</li>
-					<li>
-						<a href="irina.html">Irina</a>
-					</li>
-					<li>
-						<a href="winter.html">Winter</a>
-					</li>
-					<li>
-						<a href="main.html">Back</a>
-					</li>
-				</ul>
-			</nav>
-		</header>
+		<script type="text/javascript" src="../lib/jquery-3.4.1.min.js"></script>
+		<nav id="nav"></nav>
+		<!-- load the nav -->
+		<script type="text/javascript">
+			$("#nav").load("nav.txt");
+		</script>
+
 		<article>
-			<h1>Irina</h1>
-			<a href="../pictures/irina.png" target="_blank"><img src="../pictures/irina.png" height="400" alt="Irina" title="Irina"></a>
-			<section>
+			<section id="base">
+				<h1>Irina</h1>
+				<a href="../pictures/irina.png" target="_blank"><img src="../pictures/irina.png" height="400" alt="Irina" title="Irina"></a>
+			</section>
+	
+			<section id="intro">
 				<p>俄罗斯超模伊莉娜·莎伊克 (Irina Shayk)，出生于俄罗斯的叶曼热林斯克市。全名Irina Shaykhlislamova，简称为Irina Shayk或Irina Sheik。</p>
 			</section>
 		</article>
