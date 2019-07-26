@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Vue Test</title>
+    <link rel="stylesheet" type="text/css" href="../css/vue.css">
+	<script src="https://cdn.staticfile.org/vue/2.4.2/vue.js"></script>
+    <script type="text/javascript" src="../lib/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript">
+        Vue.component('loginDemo',{
+            template:`
+            <div>
+                <legend style="font-size:1.5em; font-weight='bold'">Account</legend>
+
+                <label for="username">username:   
+                    <input type="text" name="username" v-model='username' required="required" placeholder="please enter your user name" ><br></label>
+
+                <label for="password">password: 
+                    <input type="password" name="password" v-model='password' required placeholder="password"></label>
+
+                <button @click='loginSubmit'> login</button>
+            </div>
+            `,
+            data:function(){
+                return {
+                    username:'',
+                    password:''
+                };
+            },
+
+            methods:{
+                loginSubmit(){
+                    var xmlhttp = new XMLHttpRequest();
+                    console.log('test');
+                    xmlhttp.onreadystatechange=function(){
+                        if(xmlhttp.readyState == 4 && xmlhttp.status == 200){
+                            var res = JSON.parse(xmlhttp.responseText);
+                            if(res.status == 1){
+                                alert('成功登陆');
+                                $('#login').remove();
+                            }else{
+                                alert('登录失败');
+                            }
+
+                        }else{
+                            console.log('logining');
+                        }
+                    };
+                    xmlhttp.open('post',"http://123.207.52.59:8088/login", true);
+                    var user = new FormData();
+                    user.append('account', this.username);
+                    user.append('password',this.password);
+                    xmlhttp.send(user);
+                }
+            }
+        })
+    </script>
+</head>
+<body>
+
+    <div id="app">
+        <component :is='curr' id='login'></component>
+    </div> 
+         
+    <div id="dw">
+        
+    </div>
+
+    <script type="text/javascript">
+        var app = new Vue({
+            el:"#app",
+            data:{
+                test:"www",
+                curr:'loginDemo'
+            },
+            methods:{
+                addToCart(){
+                    if(this.inventory>0) this.inventory -= 1;
+                },
+                getInven: function(){
+                    return Date.now();
+                }
+            },
+            computed:{
+
+            }
+        });
+
+        // var dw = new Vue({
+        //     el:'#dw'
+        // })
+    </script>
+
+
+
+
+</body>
+</html>

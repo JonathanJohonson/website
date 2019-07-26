@@ -5,7 +5,14 @@
 		<button type="button" id="light" status="on">关灯</button>
 </sidebar>
 
+	<script src="https://cdn.staticfile.org/vue/2.4.2/vue.js"></script>
+    <script type="text/javascript" src="../lib/jquery-3.4.1.min.js"></script>
+
 <header class="head">
+			<div id='login'></div>
+			<script type="text/javascript">
+				$('#login').load('./login-component.html');
+			</script>
 				<nav>
 			<ul id="UL">
 				<li id="domTest">
@@ -22,19 +29,5 @@
 				</li>
 			</ul>
 		</nav>
-	<form method="get" accept="">
-		<fieldset>
-			<legend style="font-size:1.5em; font-weight='bold'">Account</legend>
-			<label for="ID">ID:	</label>
-			<input type="text" name="acc" id="ID" required="required" placeholder="user name" accesskey="s"><br>
-			<input type="radio" name="gender" value="male">
-			<label>male</label><br>
-			<input type="radio" name="gender" id="gender" value="female">
-			<label for="gender">female</label><br>
-			<label for="email">email:</label>
-			<input type="Email" name="youxiang" placeholder ="abc@efg.com">
-			<input type="hidden" name="hide" value="www">
-			<br/><input type="submit" value="create">
-		</fieldset>
-	</form>
+
 </header>

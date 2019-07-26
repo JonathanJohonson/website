@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Vue</title>
+	<meta charset="utf-8">
+	<script type="text/javascript" src='../lib/vue.js' ></script>
+</head>
+<body>
+	<div id="app">
+		<label-text v-on:focus.native="onFocus"></label-text>
+
+	</div>
+
+	<script type="text/javascript">
+		var component = {
+			template:`
+				<label>
+					<input type="text" name="dw">
+					<p>dwwww</p>
+				</label>
+			`
+		};
+		var app = new Vue({
+			el:'#app',
+			components:{
+				'label-text':component
+			},
+			computed:{
+				
+			},
+			methods:{
+				onFocus(){
+					alert('bravo');
+				}
+			}
+		})
+
+	</script>
+</body>
+</html>
+

@@ -1,8 +1,9 @@
+
 $('header').load("../html/header.html");
 
 $(function(){
+    //load the button event
     var button = $('#light');
-    console.log('button');
     button.click(function(){  
         var body = $('body');
         //if the light is on.
@@ -17,5 +18,7 @@ $(function(){
             this.innerText = '关灯';
             $(this).attr('status', 'on');
         }
+
+
     });
 });
