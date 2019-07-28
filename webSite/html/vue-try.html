@@ -10,10 +10,14 @@
 </head>
 
 <body>
+<!-- 			enter-active-class='animated swing'
+			leave-active-class='animated shake' -->
 	<div id="app">
 		<transition name='fade' 
-			enter-active-class='animated swing'
-			leave-active-class='animated shake'>
+			@before-enter='handleBeforeEnter'
+			@enter='handleEnter'
+			@after-enter='handleAfterEnter()'
+			>
 			<p v-show = 'show'>
 				Hello World!
 			</p>
@@ -33,13 +37,26 @@
 		var app = new Vue({
 			el:'#app',
 			data:{
-				show:true
+				show:false
 			},
 			components:{
 			},
 			computed:{
 			},
 			methods:{
+				handleBeforeEnter(el){
+					console.log('before');
+				},
+				handleEnter(el, done){
+					console.log("we're in.");
+					setTimeout(()=>{
+						el.style.color = 'red';
+					},1000);
+					done();
+				},
+				handleAfterEnter(el){	
+					console.log("we're out.");
+				}
 			}
 		})
 
