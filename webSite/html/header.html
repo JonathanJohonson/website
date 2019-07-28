@@ -1,33 +1,43 @@
-<p id="top"></p>
-<!-- fixed tools sidebar-->
-<sidebar class="fixedTools">
-		<button type="button" id="toTop"><a href="#top" style="">Top</a></button>
-		<button type="button" id="light" status="on">关灯</button>
-</sidebar>
-
+<!DOCTYPE html>
+<html>
+<head>
+	<title>header</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="../css/style.css">
 	<script src="https://cdn.staticfile.org/vue/2.4.2/vue.js"></script>
-    <script type="text/javascript" src="../lib/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="../lib/JQuery.js"></script>
+</head>
 
-<header class="head">
-			<div id='login'></div>
-			<script type="text/javascript">
-				$('#login').load('./login-component.html');
-			</script>
-				<nav>
-			<ul id="UL">
-				<li id="domTest">
-					<a href="mio.html">MIO</a>
-				</li>
-				<li>
-					<a href="irina.html">Irina</a>
-				</li>
-				<li>
-					<a href="winter.html">Winter</a>
-				</li>
-				<li>
-					<a href="main.html">Back</a>
-				</li>
-			</ul>
-		</nav>
+<body>
+	<p id="top"></p>
+<!-- fixed tools sidebar-->
+	<sidebar class="fixedTools">
+			<button type="button" id="toTop"><a href="#top" style="">Top</a></button>
+			<button type="button" id="light" status="on">关灯</button>
+	</sidebar>
 
-</header>
+	<header class="head">
+			<nav>
+				<ul class = "toolsBar">
+					<li><a href="todoList.html">List</a></li>
+					<li><a href="snake.html">贪食蛇</a></li>
+				</ul>
+				<h1 style="font-weight:'bold'">目录</h1>
+				<ul id="directory">
+					<li id="domTest">
+						<a href="mio.html">MIO</a>
+					</li>
+					<li>
+						<a href="irina.html">Irina</a>
+					</li>
+					<li>
+						<a href="winter.html">Winter</a>
+					</li>
+					<li>
+						<a href="main.html">Back</a>
+					</li>
+				</ul>
+			</nav>
+	</header>
+</body>
+</html>

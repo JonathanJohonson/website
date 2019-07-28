@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>todoList</title>
+	<meta charset="utf-8">
+	<script type="text/javascript" src='../lib/vue.js'></script>
+</head>
+<body>
+	<div id="app">
+		<input type="text" name="thing-input" v-model='thing'>
+		<button @click='addThingToList'>add</button>
+		<printer :item='item' v-for="(item,index) in list" :key="index" @delete="delelteItem(index,$event)"></printer>
+	</div>
+
+	<script type="text/javascript">
+		var app = new Vue({
+			el:'#app',
+			data:{
+				list:['1','2','3'],
+				thing:''
+			},
+			components:{
+				printer:{
+					props:{
+						item:String
+					},
+					template:
+						`<li @click="$emit('delete','EEEEEvent')">{{item}}</li>`
+					,
+				},
+			},
+			methods:{
+				addThingToList(){
+					if(this.thing == '') return;
+					this.list.push(this.thing);
+					this.thing = '';
+				},
+				delelteItem(index,b){
+					console.log(b);
+					this.list.splice(index,1);
+				}
+			}
+		});
+	</script>
+
+</body>
+</html>

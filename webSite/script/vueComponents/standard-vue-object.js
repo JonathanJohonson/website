@@ -39,5 +39,11 @@ var vue = new Vue({
 			/*computed varians in datas*/
 		}
 	},
-	template:`html template content`
+	template:`html template content`,
+	mounted:{
+		function(){
+			/*this function will be called when the script boot*/
+
+		}
+	}
 });

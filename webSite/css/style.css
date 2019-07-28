@@ -27,6 +27,20 @@
  text-decoration: underline;
 }
 
+.toolsBar ul {
+    display: block;
+    overflow: hidden;
+    white-space:nowrap;
+}
+.toolsBar li{
+	display: inline-block;
+	text-align: center;
+	font-size: 1.25em;
+    height: 1em;
+    display: inline-block;
+    background-color: #99ff99;
+}
+
 .title{
 	font-size: 2em;
 	font-weight: bold;

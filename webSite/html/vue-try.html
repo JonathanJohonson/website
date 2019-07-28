@@ -4,34 +4,42 @@
 	<title>Vue</title>
 	<meta charset="utf-8">
 	<script type="text/javascript" src='../lib/vue.js' ></script>
+	<link rel="stylesheet" type="text/css" href="../css/animate.css">
+	<style type="text/css">
+	</style>
 </head>
+
 <body>
 	<div id="app">
-		<label-text v-on:focus.native="onFocus"></label-text>
-
+		<transition name='fade' 
+			enter-active-class='animated swing'
+			leave-active-class='animated shake'>
+			<p v-show = 'show'>
+				Hello World!
+			</p>
+		</transition>
+		<button @click='show=!show' 
+				style="position: fixed;
+						display: block;
+						left:10%;
+						top:10%">
+					toggle
+			</button>
 	</div>
 
 	<script type="text/javascript">
-		var component = {
-			template:`
-				<label>
-					<input type="text" name="dw">
-					<p>dwwww</p>
-				</label>
-			`
-		};
+
+
 		var app = new Vue({
 			el:'#app',
+			data:{
+				show:true
+			},
 			components:{
-				'label-text':component
 			},
 			computed:{
-				
 			},
 			methods:{
-				onFocus(){
-					alert('bravo');
-				}
 			}
 		})
 
